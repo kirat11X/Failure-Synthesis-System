@@ -1,0 +1,23 @@
+[
+  {
+    "event_id": "ev-e8857406cdcf",
+    "source_id": 298,
+    "timestamp_ns": 1791454082000000000,
+    "event_type": 48,
+    "event_name": "DIAGNOSTIC",
+    "schema_version": 1,
+    "decode_status": "PARTIALLY_DECODED",
+    "fields": {
+      "status_code": 2,
+      "status_name": "FAULT",
+      "temperature_c": 81.5
+    },
+    "interpreted_fields": [
+      "status_name"
+    ],
+    "unknown_bytes": 8,
+    "reason": null,
+    "warnings": [],
+    "payload_len": 14
+  }
+]

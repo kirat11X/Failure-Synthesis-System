@@ -1,0 +1,192 @@
+[
+  {
+    "event_id": "ev-617073ef9e26",
+    "source_id": 474,
+    "timestamp_ns": 1791454021200000000,
+    "event_type": 33,
+    "event_name": "FORMATION_STATE",
+    "schema_version": 1,
+    "decode_status": "SUCCESS",
+    "fields": {
+      "state_code": 0,
+      "state": "IN_FORMATION",
+      "formation_id": 7
+    },
+    "interpreted_fields": [
+      "state"
+    ],
+    "unknown_bytes": 0,
+    "reason": null,
+    "warnings": [],
+    "payload_len": 3
+  },
+  {
+    "event_id": "ev-f75a8746cbd3",
+    "source_id": 298,
+    "timestamp_ns": 1791454021210000000,
+    "event_type": 33,
+    "event_name": "FORMATION_STATE",
+    "schema_version": 1,
+    "decode_status": "SUCCESS",
+    "fields": {
+      "state_code": 0,
+      "state": "IN_FORMATION",
+      "formation_id": 7
+    },
+    "interpreted_fields": [
+      "state"
+    ],
+    "unknown_bytes": 0,
+    "reason": null,
+    "warnings": [],
+    "payload_len": 3
+  },
+  {
+    "event_id": "ev-191658572a40",
+    "source_id": 901,
+    "timestamp_ns": 1791454021230000000,
+    "event_type": 33,
+    "event_name": "FORMATION_STATE",
+    "schema_version": 1,
+    "decode_status": "SUCCESS",
+    "fields": {
+      "state_code": 0,
+      "state": "IN_FORMATION",
+      "formation_id": 7
+    },
+    "interpreted_fields": [
+      "state"
+    ],
+    "unknown_bytes": 0,
+    "reason": null,
+    "warnings": [],
+    "payload_len": 3
+  },
+  {
+    "event_id": "ev-956d91bd81b0",
+    "source_id": 298,
+    "timestamp_ns": 1791454022500000000,
+    "event_type": 16,
+    "event_name": "LIDAR_STATUS",
+    "schema_version": 1,
+    "decode_status": "SUCCESS",
+    "fields": {
+      "status_code": 0,
+      "status_name": "OK",
+      "timeout_count": 0
+    },
+    "interpreted_fields": [
+      "status_name"
+    ],
+    "unknown_bytes": 0,
+    "reason": null,
+    "warnings": [],
+    "payload_len": 6
+  },
+  {
+    "event_id": "ev-722d707b684c",
+    "source_id": 474,
+    "timestamp_ns": 1791454023120000000,
+    "event_type": 32,
+    "event_name": "AVOIDANCE",
+    "schema_version": 1,
+    "decode_status": "SUCCESS",
+    "fields": {
+      "reason_code": 1,
+      "reason": "COLLISION_RISK",
+      "min_separation_m": 3.2,
+      "heading_change_deg": -35
+    },
+    "interpreted_fields": [
+      "reason"
+    ],
+    "unknown_bytes": 0,
+    "reason": null,
+    "warnings": [],
+    "payload_len": 7
+  },
+  {
+    "event_id": "ev-2e92ae032f03",
+    "source_id": 298,
+    "timestamp_ns": 1791454023050000000,
+    "event_type": 16,
+    "event_name": "LIDAR_STATUS",
+    "schema_version": 1,
+    "decode_status": "SUCCESS",
+    "fields": {
+      "status_code": 17,
+      "status_name": "LIDAR_TIMEOUT",
+      "timeout_count": 3
+    },
+    "interpreted_fields": [
+      "status_name"
+    ],
+    "unknown_bytes": 0,
+    "reason": null,
+    "warnings": [],
+    "payload_len": 6
+  },
+  {
+    "event_id": "ev-9d2fbc08bffc",
+    "source_id": 298,
+    "timestamp_ns": 1791454023060000000,
+    "event_type": 48,
+    "event_name": "DIAGNOSTIC",
+    "schema_version": 1,
+    "decode_status": "PARTIALLY_DECODED",
+    "fields": {
+      "status_code": 1,
+      "status_name": "DEGRADED",
+      "temperature_c": 72.4
+    },
+    "interpreted_fields": [
+      "status_name"
+    ],
+    "unknown_bytes": 8,
+    "reason": null,
+    "warnings": [],
+    "payload_len": 14
+  },
+  {
+    "event_id": "ev-1c432aca07e2",
+    "source_id": 474,
+    "timestamp_ns": 1791454023180000000,
+    "event_type": 33,
+    "event_name": "FORMATION_STATE",
+    "schema_version": 1,
+    "decode_status": "SUCCESS",
+    "fields": {
+      "state_code": 1,
+      "state": "LEFT_FORMATION",
+      "formation_id": 7
+    },
+    "interpreted_fields": [
+      "state"
+    ],
+    "unknown_bytes": 0,
+    "reason": null,
+    "warnings": [],
+    "payload_len": 3
+  },
+  {
+    "event_id": "ev-3f07479663aa",
+    "source_id": 901,
+    "timestamp_ns": 1791454023300000000,
+    "event_type": 33,
+    "event_name": "FORMATION_STATE",
+    "schema_version": 1,
+    "decode_status": "SUCCESS",
+    "fields": {
+      "state_code": 0,
+      "state": "IN_FORMATION",
+      "formation_id": 7
+    },
+    "interpreted_fields": [
+      "state"
+    ],
+    "unknown_bytes": 0,
+    "reason": null,
+    "warnings": [],
+    "payload_len": 3
+  }
+]

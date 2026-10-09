@@ -1,0 +1,32 @@
+[
+  {
+    "event_id": "ev-d07114310f73",
+    "source_id": 298,
+    "timestamp_ns": 1791454083000000000,
+    "event_type": 16,
+    "event_name": "LIDAR_STATUS",
+    "schema_version": 1,
+    "decode_status": "MALFORMED_PAYLOAD",
+    "fields": {},
+    "interpreted_fields": [],
+    "unknown_bytes": 4,
+    "reason": "field 'timeout_count' needs bytes 2..5 but payload has 4 bytes",
+    "warnings": [],
+    "payload_len": 4
+  },
+  {
+    "event_id": "ev-bf08f4db0843",
+    "source_id": 298,
+    "timestamp_ns": 1791454083100000000,
+    "event_type": 16,
+    "event_name": "LIDAR_STATUS",
+    "schema_version": 1,
+    "decode_status": "MALFORMED_PAYLOAD",
+    "fields": {},
+    "interpreted_fields": [],
+    "unknown_bytes": 0,
+    "reason": "field 'status_code' needs bytes 0..1 but payload has 0 bytes",
+    "warnings": [],
+    "payload_len": 0
+  }
+]

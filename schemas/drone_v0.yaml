@@ -1,0 +1,67 @@
+# FSS decoder schema for the v0 demo fleet (fixtures + DEMO.md).
+#
+# Schema  = HOW to decode bytes (offset, type, size, endian).
+# Enums   = documented meaning of integer codes. Unmapped codes decode as the
+#           reserved label UNKNOWN, so no enum here may use that label.
+#
+# Field keys: name, offset, type, size, endian (required when size > 1),
+#             enum (optional), enum_field (optional, default "<name>_name").
+# Types: u8 u16 u32 u64 i8 i16 i32 i64 f32 f64 bool.
+#
+# Hand-written and independent of fixtures/generate_fixtures.py on purpose:
+# the fixture tests fail if the two disagree.
+
+schema_set: drone_v0
+
+enums:
+  lidar_status:
+    0: OK
+    17: LIDAR_TIMEOUT
+    18: SENSOR_DISCONNECTED
+    19: INVALID_SCAN
+  diag_status:
+    0: NOMINAL
+    1: DEGRADED
+    2: FAULT
+  avoidance_reason:
+    1: COLLISION_RISK
+    2: GEOFENCE
+    3: OPERATOR_COMMAND
+  formation_state:
+    0: IN_FORMATION
+    1: LEFT_FORMATION
+    2: REJOINING
+
+event_types:
+  0x10:
+    name: LIDAR_STATUS
+    version: 1
+    fields:
+      - {name: status_code,   offset: 0, type: u16, size: 2, endian: little, enum: lidar_status, enum_field: status_name}
+      - {name: timeout_count, offset: 2, type: u32, size: 4, endian: little}
+
+  0x20:
+    name: AVOIDANCE
+    version: 1
+    fields:
+      - {name: reason_code,        offset: 0, type: u8,  size: 1, enum: avoidance_reason, enum_field: reason}
+      - {name: min_separation_m,   offset: 1, type: f32, size: 4, endian: little}
+      - {name: heading_change_deg, offset: 5, type: i16, size: 2, endian: little}
+
+  0x21:
+    name: FORMATION_STATE
+    version: 1
+    fields:
+      - {name: state_code,   offset: 0, type: u8,  size: 1, enum: formation_state, enum_field: state}
+      - {name: formation_id, offset: 1, type: u16, size: 2, endian: little}
+
+  # Only the first 6 bytes are documented. Producers append vendor bytes after
+  # them, which decode as PARTIALLY_DECODED with unknown_bytes > 0.
+  0x30:
+    name: DIAGNOSTIC
+    version: 1
+    fields:
+      - {name: status_code,   offset: 0, type: u16, size: 2, endian: little, enum: diag_status, enum_field: status_name}
+      - {name: temperature_c, offset: 2, type: f32, size: 4, endian: little}
+
+# 0x31 is intentionally not configured (UNKNOWN_EVENT_TYPE fixture).

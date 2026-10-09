@@ -1,0 +1,17 @@
+[
+  {
+    "event_id": "ev-fef8323630b6",
+    "source_id": 474,
+    "timestamp_ns": 1791454081000000000,
+    "event_type": 49,
+    "event_name": null,
+    "schema_version": null,
+    "decode_status": "UNKNOWN_EVENT_TYPE",
+    "fields": {},
+    "interpreted_fields": [],
+    "unknown_bytes": 12,
+    "reason": null,
+    "warnings": [],
+    "payload_len": 12
+  }
+]

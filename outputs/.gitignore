@@ -1,0 +1,2 @@
+# Live-LLM outputs (pytest -m live, demo/run_demo.py --live) are written here for review.
+*.live.json

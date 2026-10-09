@@ -1,0 +1,39 @@
+# Secrets and credentials (never commit)
+*.pem
+*.key
+.env
+.env.*
+secrets/
+.webui_secret_key
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+.coverage
+coverage.json
+htmlcov/
+.hypothesis/
+.mypy_cache/
+.ruff_cache/
+
+# Java build output
+fss-core/target/
+*.class
+
+# Runtime data
+*.dat
+
+# Downloaded research PDFs (keep research_papers/README.md only)
+research_papers/*/
+
+# Editor and OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.swp
+.claude/

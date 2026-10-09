@@ -1,0 +1,25 @@
+[
+  {
+    "event_id": "ev-749b093d1d61",
+    "source_id": 298,
+    "timestamp_ns": 1791454084000000000,
+    "event_type": 16,
+    "event_name": "LIDAR_STATUS",
+    "schema_version": 1,
+    "decode_status": "SUCCESS",
+    "fields": {
+      "status_code": 99,
+      "status_name": "UNKNOWN",
+      "timeout_count": 1
+    },
+    "interpreted_fields": [
+      "status_name"
+    ],
+    "unknown_bytes": 0,
+    "reason": null,
+    "warnings": [
+      "status_code=99 has no mapping in enum 'lidar_status'"
+    ],
+    "payload_len": 6
+  }
+]

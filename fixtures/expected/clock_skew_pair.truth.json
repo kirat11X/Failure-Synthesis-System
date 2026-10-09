@@ -1,0 +1,37 @@
+{
+  "description": "Ground truth for clock_skew_pair. NOT decoder input. Drone 115's clock runs 250 ms fast, so producer timestamps put 220's reaction before 115's LiDAR timeout, which actually caused it.",
+  "clock_offset_ns": {
+    "115": 250000000,
+    "220": 0
+  },
+  "true_cause": {
+    "source_id": 115,
+    "event_name": "LIDAR_STATUS",
+    "true_time_ns": 1791454145000000000,
+    "producer_timestamp_ns": 1791454145250000000
+  },
+  "effects": [
+    {
+      "source_id": 220,
+      "event_name": "AVOIDANCE",
+      "true_time_ns": 1791454145080000000,
+      "producer_timestamp_ns": 1791454145080000000
+    },
+    {
+      "source_id": 220,
+      "event_name": "FORMATION_STATE",
+      "true_time_ns": 1791454145140000000,
+      "producer_timestamp_ns": 1791454145140000000
+    }
+  ],
+  "true_order": [
+    "115:LIDAR_STATUS",
+    "220:AVOIDANCE",
+    "220:FORMATION_STATE"
+  ],
+  "producer_timestamp_order": [
+    "220:AVOIDANCE",
+    "220:FORMATION_STATE",
+    "115:LIDAR_STATUS"
+  ]
+}

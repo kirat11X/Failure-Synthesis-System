@@ -1,0 +1,3 @@
+streamlit>=1.40
+anthropic>=0.70  # optional: only for "Explain with Claude"
+-r requirements.txt
