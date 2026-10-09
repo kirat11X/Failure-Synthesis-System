@@ -113,7 +113,7 @@ Package `fss_py/`. The pipeline is `investigate()` in `investigate.py`:
 
 ```
 retrieve (bounded) → decode_all → build_evidence → KnowledgeBase.lookup → build_context
-  → LLM (stub or Claude) → parse_output → validate        (+ one optional bounded follow-up retrieve)
+  → LLM (stub) → parse_output → validate        (+ one optional bounded follow-up retrieve)
 ```
 
 ### 5.1 Retriever interface (`retriever.py`, `model.py`)
@@ -287,7 +287,7 @@ The LLM reasons over decoded evidence and domain knowledge only. Its reply must 
 
 **Clients:**
 - `StubLLM` is deterministic and offline. Every test uses it, and so does the demo by default.
-- `AnthropicLLM` calls Claude (`claude-opus-5-5`, key from `FSS_LLM_API_KEY`). Its output is constrained to the contract's JSON schema, so it cannot send a context request, and live runs use `max_context_requests=0`.
+Its output is constrained to the contract's JSON schema, so it cannot send a context request, and live runs use `max_context_requests=0`.
 
 ### 5.8 Output validator (`validator.py`)
 
@@ -528,7 +528,7 @@ pip install -r requirements-app.txt                    # optional: anthropic SDK
 FSS_LLM_API_KEY=… pytest -m live                       # optional live smoke test (LLM-EVAL)
 FSS_LLM_API_KEY=… python -m scenarios.llm_eval --runs 3 --out demo/outputs/live   # LLM-EVAL-1..7
 python demo/build_outputs.py --junit J.xml --coverage C.json --llm-eval demo/outputs/live/llm_eval.md
-FSS_LLM_API_KEY=… python demo/run_demo.py SC1 --live    # one scenario with Claude
+FSS_LLM_API_KEY=… python demo/run_demo.py SC1 --live    
 ```
 
 ## 10. Verification record *(filled by the verification runs, 2026-10-09)*

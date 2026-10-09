@@ -78,10 +78,3 @@ By default the harness works under `java.io.tmpdir`, which is tmpfs here. The sw
 | Every retrieval is time-bounded | `RetrieveRequest` (Java) and `RetrievalRequest` (Python) reject inverted, empty, > 1 h and whole-u64 windows; `max_events` is 1..10 000 | `RetrieveContractTest`, `test_rule_03_*` |
 | Unknowns stay unknown | `UNKNOWN_EVENT_TYPE`, `PARTIALLY_DECODED` and `MALFORMED_PAYLOAD` (all-or-nothing); reserved `UNKNOWN` enum label; opaque bytes never reach the evidence | `test_rule_10..13`, `test_fuzz.py` |
 | Producer timestamp preserved; no global order | Raw `timestamp_ns` end to end, unsigned compares; evidence grouped by source plus a clock caveat | `test_rule_05/06`, `clock_skew_pair` fixture |
-
-## Notes
-
-- The repository root that git sees is your home directory. Nothing has been committed. Run
-  `git init` in this folder if you want this project tracked on its own; `.gitignore` is ready.
-- Contract changes from the proposal text (with reasons) are listed in
-  [contract/CONTRACT.md §10](contract/CONTRACT.md).
